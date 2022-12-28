@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.2s;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #7a30cf, #2665c4);
+}
+
+h2 {
+  text-align: center;
+  border-radius: 7px;
+  background: linear-gradient(to top, #7a30cf, #2665c4);
+  color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  height: 2.2rem;
+  width: 30rem;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 7px;
+  border: 2px solid #777;
+}
+
+input:focus {
+  border-color: #2665c4;
+}
+
+.container {
+  width: 40rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px #222;
+  position: relative;
+}
+
+.add-button,
+.trash-button,
+.check-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  background: linear-gradient(45deg, #7a30cf, #2665c4);
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border-bottom: 2px solid #222;
+}
+
+.add-button-image,
+.trash-button-image,
+.check-button-image {
+  filter: invert(1);
+  width: 1.2rem;
+}
+
+.add-button:hover,
+.trash-button:hover {
+  opacity: 1;
+  transform: scale(105%);
+}
+
+.check-button {
+  padding: 0.3rem;
+  border-radius: 50%;
+  border: none;
+  background: #999;
+  opacity: 0.6;
+}
+
+.trash-button {
+  background: #ff1c1c;
+  border: none;
+}
+.task {
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.to-do-list {
+  border-radius: 7px;
+  margin-top: 2rem;
+  height: 30rem;
+  background-color: #e7e7e7;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.to-do-list::-webkit-scrollbar {
+  background-color: #cacaca;
+  width: 0.5rem;
+  border-radius: 10px;
+}
+
+.to-do-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 30rem;
+  margin: 1rem auto;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #222;
+}
+
+.no-task {
+  color: #999999;
+  opacity: 0.5;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* caso o usuario clicar no botão com o input vazio */
+
+.empty {
+  border-color: #ff1c1c;
+}
+
+.empty::placeholder {
+  color: #ff1c1c;
+}
+
+/* Quando a tarefa estiver concluido */
+
+.completed-task {
+  background: #41b883;
+  opacity: 1;
+}
+
+.dismiss {
+  transform: translateX(-50%);
+  opacity: 0;
+}
